@@ -1,0 +1,16 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-app',
+  template: `<span>{{name | uppercase}}</span>
+  <input type="text" [(ngModel)]="name"/><br/>
+  <div>{{someNumber | number : '2.2-2'}}</div>
+  <div>{{someDate | date : 'HH:mm:ss'}}</div>
+  <div>{{somecur | currency : 'INR' :true}}</div>
+  `,
+})
+export class AppComponent  { name = 'Hellskippers'; 
+  public someNumber:number=2.34535445; 
+  public someDate:Date=new  Date();
+  public somecur:number=2.34; 
+}
